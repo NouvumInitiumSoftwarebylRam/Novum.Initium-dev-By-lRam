@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnwendungsEntwicklung von lRam</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#hero" class="nav-logo">Novum Initium</a>
+                <div class="lang-toggle">
+                    <span class="lang-link active">DE</span> |
+                    <a href="index-en.html" class="lang-link">EN</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#about">Über mich</a></li>
+                    <li><a href="#skills">Fähigkeiten</a></li>
+                    <li><a href="#projects">Projekte</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#privacy">Rechtliches</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section start -->
+        <section id="hero" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <img src="assets/logo.png" alt="Novum Initium Logo" class="hero-logo">
+                    <h1 class="hero-title">&lt;\Anwendungs<span class="code-case">Entwicklung</span> von <span class="code-var">lRam</span>\&gt;</h1>
+                    <p class="hero-disclaimer">Novum Initium Anwendungsentwicklung von lRam ist ein persönliches Portfolio-Projekt und keine eingetragene Firma. Diese Website wurde ausschließlich zu Lern- und Präsentationszwecken erstellt.</p>
+                    <p class="hero-subtitle">Persönliches Portfolio & Lernlabor eines angehenden Softwareentwicklers.</p>
+                    <p class="hero-description">
+                              Ich befinde mich derzeit in der Umschulung zum Fachinformatiker Anwendungsentwicklung in Deutschland
+                                        und baue meine Fähigkeiten in der Softwareentwicklung auf.
+                    </p>
+                    <a href="#projects" class="hero-button">Meine Projekte ansehen</a>
+                </div>
+            </div>
+        </section>
+        <!-- Hero section end -->
+
+        <!-- About section start -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Über mich</h2>
+                <div class="about-content">
+                    <p>
+                        Hallo! Ich absolviere derzeit eine Umschulung zum Fachinformatiker Anwendungsentwicklung in Deutschland. Diese Umschulung markiert einen Neuanfang in meiner Karriere mit dem Schwerpunkt Softwareentwicklung und Technologie.
+                    </p>
+                    <p>
+                        Meine Interessen umfassen Python-Programmierung, Webentwicklungstechnologien und diverse Softwareprojekte. Ich bin begeistert davon, effiziente und benutzerfreundliche Anwendungen zu entwickeln und komplexe Probleme durch Code zu lösen.
+                    </p>
+                    <p>
+                        Diese Website dient mir als Portfolio und Lernlabor, in dem ich meine Fortschritte dokumentiere, Projekte teile und die Fähigkeiten präsentiere, die ich während meiner Umschulung entwickle.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- About section end -->
+
+        <!-- Skills section start -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Fähigkeiten & Werkzeuge</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript (beginner)</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Visual Studio Code</span>
+                    <span class="skill-tag">Cursor</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Windows</span>
+                    <span class="skill-tag">Command Line</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Microsoft Office</span>
+                    <span class="skill-tag">Arbeiten mit Frameworks wie Django und Flask</span>
+                 </div>
+            </div>
+        </section>
+        <!-- Skills section end -->
+
+        <!-- Projects section start -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projekte</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3 class="project-title">LagerverwaltungsApp (v1.5.0)</h3>
+                        <p class="project-description">
+                            Ein modernes Logistik-Dashboard, das als IHK-Ausbildungsprojekt durch meine Praktikumszeit bei HILA Automation für einen möglichen Kunden entwickelt wurde und Lagerabläufe durch automatisierte Fahrer-Check-ins und Torverwaltung optimiert.
+                        </p>
+                        <div class="project-actions">
+                            <button class="expand-btn" onclick="toggleProjectDescription('warehouse-description-expanded', this)" id="warehouse-expand-btn">
+                                <span class="expand-text">mehr</span>
+                            </button>
+                        </div>
+                        <div class="project-description-expanded" id="warehouse-description-expanded">
+                            <p class="project-description">
+                                <strong>Hauptfunktionen:</strong>
+                            </p>
+                            <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+                                <li>Fahrer-Self-Service-Portal: Mehrsprachige Weboberfläche für Fahrer zum Check-in mit Referenznummern, wodurch Telefonate und Papierkram entfallen</li>
+                                <li>Echtzeit-Operator-Dashboard: Live-Überwachung mit Drag-and-Drop-Torzuweisung, Filterung und Statusverfolgung</li>
+                                <li>Automatisierte Torzuweisung: Intelligentes System, das Tore in 30%+ der Fälle automatisch zuweist</li>
+                                <li>Robuste Validierung: Reduziert Referenzfehler um 50% durch strikte Validierung und klare Fehlermeldungen</li>
+                            </ul>
+                            <p class="project-description">
+                                <strong>Technischer Stack:</strong>
+                            </p>
+                            <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+                                <li>Backend: Python FastAPI mit SQLAlchemy, WebSockets, SQLite</li>
+                                <li>Frontend: React 18 + TypeScript + Vite, Tailwind CSS, Zustand State-Management</li>
+                                <li>Desktop: Electron-Wrapper für portable Windows-Bereitstellung</li>
+                            </ul>
+                            <p class="project-description">
+                                <strong>Leistung & Wirkung:</strong>
+                            </p>
+                            <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+                                <li>Reduziert Check-in-Zeit von 2-3 Minuten auf &lt;1 Minute</li>
+                                <li>Optimiert Lagerabläufe mit Echtzeit-Updates</li>
+                                <li>DSGVO-konform mit minimaler Datenspeicherung</li>
+                                <li>Offline-fähige lokale Bereitstellung (keine Cloud-Abhängigkeit)</li>
+                                <li>Erfolgreich bei Faber-Castell-Anlagen eingesetzt</li>
+                            </ul>
+                            <p class="project-description">
+                                <em>Entwickelt während der Berufsausbildung zum Fachinformatiker Anwendungsentwicklung, demonstriert Full-Stack-Entwicklung, UI/UX-Design und Produktionsbereitstellung.</em>
+                            </p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">React 18</span>
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">Python FastAPI</span>
+                            <span class="project-tag">SQLAlchemy</span>
+                            <span class="project-tag">WebSockets</span>
+                            <span class="project-tag">Electron</span>
+                            <span class="project-tag">Tailwind CSS</span>
+                            <span class="project-tag">SQLite</span>
+                        </div>
+                        <a href="#" class="project-link" onclick="openProjectModal('warehouse-modal'); return false;">Projekt ansehen</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3 class="project-title">Python Data Analysis Tool</h3>
+                        <p class="project-description">
+                            Ein Kommandozeilen-Tool für grundlegende Datenanalyse und Dateiverarbeitung. Derzeit in Entwicklung
+                            als Teil meines Python-Lernprogramms.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data Processing</span>
+                            <span class="project-tag">CLI</span>
+                        </div>
+                        <a href="#" class="project-link" onclick="openProjectModal('python-data-analysis-tool-modal'); return false;">Projekt ansehen</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3 class="project-title">Learning Management System</h3>
+                        <p class="project-description">
+                            Ein vollständiges Lernmanagementsystem (LMS) als benutzerfreundliche Full-Stack-Webanwendung.
+                            Die Plattform bietet umfassende Funktionen für die Verwaltung von Online-Bildungsinhalten.
+                        </p>
+                        <div class="project-actions">
+                            <button class="expand-btn" onclick="toggleProjectDescription('lms-description-expanded-de', this)" id="lms-expand-btn-de">
+                                <span class="expand-text">mehr</span>
+                            </button>
+                        </div>
+                        <div class="project-description-expanded" id="lms-description-expanded-de">
+                            <p class="project-description">
+                                <strong>Funktionen:</strong> Sichere Benutzerregistrierung und Authentifizierung,
+                                Kursverwaltung für Lehrkräfte mit der Möglichkeit, Lektionen und Lehrmaterialien hinzuzufügen,
+                                sowie eine intuitive Lernumgebung für Schüler zur Kursansicht, Lektionsbearbeitung und
+                                Fortschrittsverfolgung. Die Anwendung unterstützt die Integration externer Ressourcen wie PDFs und Videos.
+                            </p>
+                            <p class="project-description">
+                                <strong>Technologie-Stack:</strong> Python Flask-Backend mit SQLite-Datenbank und React-Frontend.
+                                Das Projekt demonstriert zentrale Webentwicklungskonzepte wie Benutzerauthentifizierung,
+                                Datenbankverwaltung und RESTful API-Kommunikation. Die Anwendung läuft lokal mit einem
+                                Flask-Server auf Port 8000 und einem React-Frontend auf Port 5173, was eine einfache
+                                Einrichtung und Entwicklung ermöglicht.
+                            </p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">React Router</span>
+                            <span class="project-tag">Vite</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Backend API</span>
+                        </div>
+                        <a href="#" class="project-link" onclick="openProjectModal('lms-modal'); return false;">Projekt ansehen</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3 class="project-title">Versionskontroll-Workflow</h3>
+                        <p class="project-description">
+                            Dokumentation und Beispiele von Git-Workflows, Branching-Strategien und Kollaborationspraktiken,
+                            die während der Softwareentwicklungs-Schulung erlernt wurden.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Git</span>
+                            <span class="project-tag">GitHub</span>
+                            <span class="project-tag">Versionskontrolle</span>
+                        </div>
+                        <a href="#" class="project-link" onclick="openProjectModal('version-control-modal'); return false;">Projekt ansehen</a>
+                    </div>
+
+                    <!-- COPY THIS BLOCK to add more projects -->
+                    <!--
+                    <div class="project-card">
+                        <h3 class="project-title">[Project Name]</h3>
+                        <p class="project-description">
+                            [Project description - 2-3 sentences about what it does and technologies used]
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">[Tech 1]</span>
+                            <span class="project-tag">[Tech 2]</span>
+                            <span class="project-tag">[Tech 3]</span>
+                        </div>
+                        <a href="[project-link]" class="project-link">[View/Download/Demo]</a>
+                    </div>
+                    -->
+            </div>
+        </section>
+        <!-- Projects section end -->
+
+        <!-- Contact section start -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Kontakt</h2>
+                <div class="contact-content">
+                    <p>If you want to connect, feel free to reach out. I'm always interested in learning from others and sharing knowledge.</p>
+                    <div class="contact-links">
+                        <a href="mailto:lRam.software.novum-initium@outlook.de" class="contact-link">Email</a>
+                        <span class="contact-link">LinkedIn (coming soon)</span>
+                        <span class="contact-link">GitHub (coming soon)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section end -->
+
+        <!-- Privacy Notice section start -->
+        <section id="privacy" class="section privacy-section">
+            <div class="container">
+                <h2 class="section-title">Datenschutz & Rechtliches</h2>
+                <div class="privacy-content">
+                    <div class="privacy-notice">
+                        <p>
+                            <strong>Diese Website ist rein privat und dient ausschließlich Bildungs- und Portfoliuzwecken.</strong>
+                        </p>
+                        <p>
+                            Ich befinde mich in der Umschulung zum Fachinformatiker Anwendungsentwicklung und stelle hier
+                            meine Lernfortschritte und Projekte vor. Es werden keine gewerblichen Dienstleistungen angeboten,
+                            keine entgeltlichen Verträge geschlossen und keine kommerziellen Aktivitäten durchgeführt.
+                        </p>
+                        <p>
+                            <strong>Kontakt:</strong> Bei Fragen oder Interesse an einem Austausch erreichen Sie mich per E-Mail:
+                            <a href="mailto:lRam.software.novum-initium@outlook.de">lRam.software.novum-initium@outlook.de</a>
+                        </p>
+                        <p>
+                            <em>Diese Website ist ein privates, nicht-kommerzielles Portfolio, 
+                                das im Rahmen meiner Umschulung zum IT-Spezialisten für Anwendungsentwicklung entstanden ist. 
+                                Sie bietet keine kostenpflichtigen Dienstleistungen oder kommerzielle Aktivitäten an.</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Privacy Notice section end -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Novum Initium Application Development by lRam</p>
+            <a href="#hero" class="footer-link">Nach oben</a>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="lms-modal" class="project-modal">
+        <div class="modal-overlay" onclick="closeProjectModal('lms-modal')"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal('lms-modal')">&times;</button>
+            <h2 class="modal-title">Learning Management System</h2>
+            <div class="project-gallery" id="lms-gallery">
+                <img src="assets/lms/dashboard.png.png" alt="LMS Dashboard" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Dashboard mit Willkommensnachricht und Kursübersicht - Klicken zum Vergrößern">
+                <img src="assets/lms/explore-courses.png.png" alt="Kurse erkunden" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Kurse erkunden Seite mit Filter- und Suchfunktion - Klicken zum Vergrößern">
+                <img src="assets/lms/profile-settings.png.png" alt="Profil & Einstellungen" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Profil und Einstellungen Seite - Klicken zum Vergrößern">
+                <img src="assets/lms/grades.png.png" alt="Meine Noten" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Notenübersicht mit Gesamtdurchschnitt und detaillierter Tabelle - Klicken zum Vergrößern">
+                <img src="assets/lms/user-profile.png.PNG" alt="Benutzerprofil" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Benutzerprofil Bearbeitung - Klicken zum Vergrößern">
+                <img src="assets/lms/package-json.png.png" alt="Package.json" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Projekt-Konfiguration mit React und Vite - Klicken zum Vergrößern">
+                <img src="assets/lms/python-auth.png.png" alt="Python Authentifizierung" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Backend Authentifizierungs-Code - Klicken zum Vergrößern">
+            </div>
+            <div class="image-error-message" id="image-error-msg" style="display: none;">
+                <p><strong>Hinweis: Bilder werden geladen...</strong></p>
+                <p>Stellen Sie sicher, dass die Bilder im Ordner <code>assets/lms/</code> vorhanden sind:</p>
+                <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                    <li>• dashboard.png.png</li>
+                    <li>• explore-courses.png.png</li>
+                    <li>• profile-settings.png.png</li>
+                    <li>• grades.png.png</li>
+                    <li>• user-profile.png.PNG</li>
+                    <li>• package-json.png.png</li>
+                    <li>• python-auth.png.png</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Warehouse Management System Modal -->
+    <div id="warehouse-modal" class="project-modal">
+        <div class="modal-overlay" onclick="closeProjectModal('warehouse-modal')"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal('warehouse-modal')">&times;</button>
+            <h2 class="modal-title">LagerverwaltungsApp - Warehouse Gate Management System</h2>
+            <div class="project-gallery" id="warehouse-gallery">
+                <img src="assets/warehouse/dashboard.png" alt="Lagerverwaltung Dashboard" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Haupt-Dashboard mit Echtzeit-Übersicht der Lagertore - Klicken zum Vergrößern">
+                <img src="assets/warehouse/driver-portal.png" alt="Fahrer-Self-Service-Portal" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Mehrsprachiges Fahrer-Portal für Check-ins - Klicken zum Vergrößern">
+                <img src="assets/warehouse/operator-view.png" alt="Operator Übersicht" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Operator-Interface mit Drag-and-Drop Tor-Zuweisung - Klicken zum Vergrößern">
+                <img src="assets/warehouse/validation.png" alt="Validierungssystem" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Robuste Validierung mit Fehlervermeidung - Klicken zum Vergrößern">
+                <img src="assets/warehouse/electron-app.png" alt="Electron Desktop-App" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Portable Windows-Anwendung - Klicken zum Vergrößern">
+                <img src="assets/warehouse/database-schema.png" alt="Datenbankschema" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="SQLite Datenbankstruktur - Klicken zum Vergrößern">
+            </div>
+            <div class="image-error-message" id="warehouse-error-msg" style="display: none;">
+                <p><strong>Hinweis: Bilder werden geladen...</strong></p>
+                <p>Stellen Sie sicher, dass die Bilder im Ordner <code>assets/warehouse/</code> vorhanden sind:</p>
+                <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                    <li>• dashboard.png</li>
+                    <li>• driver-portal.png</li>
+                    <li>• operator-view.png</li>
+                    <li>• validation.png</li>
+                    <li>• electron-app.png</li>
+                    <li>• database-schema.png</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Python Data Analysis Tool Modal -->
+    <div id="python-data-analysis-tool-modal" class="project-modal">
+        <div class="modal-overlay" onclick="closeProjectModal('python-data-analysis-tool-modal')"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal('python-data-analysis-tool-modal')">&times;</button>
+            <h2 class="modal-title">Python Data Analysis Tool</h2>
+            <div class="coming-soon-content">
+                <div style="text-align: center; padding: 3rem 1rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🚀</div>
+                    <h3 style="color: var(--accent-muted); margin-bottom: 1rem;">Demnächst verfügbar!</h3>
+                    <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.6;">
+                        Dieses Projekt befindet sich derzeit in Entwicklung im Rahmen meines Python-Lernprogramms.
+                        Schauen Sie bald wieder vorbei für Updates und Demos!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Version Control Workflow Modal -->
+    <div id="version-control-modal" class="project-modal">
+        <div class="modal-overlay" onclick="closeProjectModal('version-control-modal')"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal('version-control-modal')">&times;</button>
+            <h2 class="modal-title">Versionskontroll-Workflow</h2>
+            <div class="coming-soon-content">
+                <div style="text-align: center; padding: 3rem 1rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">📋</div>
+                    <h3 style="color: var(--accent-muted); margin-bottom: 1rem;">Demnächst verfügbar!</h3>
+                    <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.6;">
+                        Dokumentation und Beispiele von Git-Workflows, Branching-Strategien und Kollaborationspraktiken,
+                        die während der Softwareentwicklungs-Schulung erlernt wurden. Demnächst verfügbar!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="image-lightbox" class="image-lightbox">
+        <div class="lightbox-overlay" onclick="closeImageLightbox()"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeImageLightbox()">&times;</button>
+            <img id="lightbox-image" src="" alt="">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <script>
+        // Handle image loading errors
+        function handleImageError(img) {
+            const errorText = document.createElement('div');
+            errorText.textContent = 'Bild nicht gefunden: ' + img.src.split('/').pop();
+            errorText.style.color = 'var(--text-muted)';
+            errorText.style.minHeight = '200px';
+            errorText.style.display = 'flex';
+            errorText.style.alignItems = 'center';
+            errorText.style.justifyContent = 'center';
+            errorText.style.background = 'var(--background-panel)';
+            errorText.style.border = '2px dashed rgba(37, 99, 235, 0.5)';
+            errorText.style.borderRadius = 'var(--border-radius)';
+            errorText.style.padding = '2rem';
+            errorText.style.fontSize = '0.9rem';
+            img.parentNode.replaceChild(errorText, img);
+            
+            // Show error message if all images fail
+            checkAllImages();
+        }
+        
+        function checkAllImages() {
+            // Check LMS gallery
+            const lmsGallery = document.getElementById('lms-gallery');
+            if (lmsGallery) {
+                const lmsImages = lmsGallery.querySelectorAll('img');
+                const lmsErrorElements = lmsGallery.querySelectorAll('div[style*="Bild nicht gefunden"]');
+                if (lmsImages.length === 0 && lmsErrorElements.length > 0) {
+                    const errorMsg = document.getElementById('image-error-msg');
+                    if (errorMsg) {
+                        errorMsg.style.display = 'block';
+                    }
+                }
+            }
+
+            // Check Warehouse gallery
+            const warehouseGallery = document.getElementById('warehouse-gallery');
+            if (warehouseGallery) {
+                const warehouseImages = warehouseGallery.querySelectorAll('img');
+                const warehouseErrorElements = warehouseGallery.querySelectorAll('div[style*="Bild nicht gefunden"]');
+                if (warehouseImages.length === 0 && warehouseErrorElements.length > 0) {
+                    const errorMsg = document.getElementById('warehouse-error-msg');
+                    if (errorMsg) {
+                        errorMsg.style.display = 'block';
+                    }
+                }
+            }
+        }
+
+        function openProjectModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Check images after a short delay
+                setTimeout(function() {
+                    checkAllImages();
+                }, 1000);
+            }
+        }
+
+        function closeProjectModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const activeModal = document.querySelector('.project-modal.active');
+                if (activeModal) {
+                    closeProjectModal(activeModal.id);
+                }
+                // Also close lightbox if open
+                const lightbox = document.getElementById('image-lightbox');
+                if (lightbox && lightbox.classList.contains('active')) {
+                    closeImageLightbox();
+                }
+            }
+        });
+
+        // Image Lightbox functions
+        function openImageLightbox(imageSrc, imageAlt) {
+            const lightbox = document.getElementById('image-lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            if (lightbox && lightboxImage && lightboxCaption) {
+                lightboxImage.src = imageSrc;
+                lightboxCaption.textContent = imageAlt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeImageLightbox() {
+            const lightbox = document.getElementById('image-lightbox');
+            if (lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Project description expand/collapse functionality
+        function toggleProjectDescription(elementId, button) {
+            const expandedContent = document.getElementById(elementId);
+            const expandText = button.querySelector('.expand-text');
+
+            if (expandedContent) {
+            if (expandedContent.classList.contains('expanded')) {
+                expandedContent.classList.remove('expanded');
+                expandText.textContent = expandText.textContent.startsWith('more') ? 'more' : 'mehr';
+            } else {
+                expandedContent.classList.add('expanded');
+                expandText.textContent = expandText.textContent.startsWith('more') ? 'less' : 'weniger';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
