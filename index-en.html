@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0d5a4a">
     <title>ApplicationDevelopment by lRam</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preload" href="assets/hero-bg.jpg.png" as="image">
@@ -152,7 +156,7 @@
                             <span class="project-tag">Tailwind CSS</span>
                             <span class="project-tag">SQLite</span>
                         </div>
-                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('warehouse-modal-en')">View Project</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('warehouse-modal-en', event)">View Project</a>
                     </div>
 
                     <div class="project-card">
@@ -166,7 +170,7 @@
                             <span class="project-tag">Data Processing</span>
                             <span class="project-tag">CLI</span>
                         </div>
-                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('python-data-analysis-tool-modal')">View Project</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('python-data-analysis-tool-modal', event)">View Project</a>
                     </div>
 
                     <div class="project-card">
@@ -202,7 +206,7 @@
                             <span class="project-tag">Python</span>
                             <span class="project-tag">Backend API</span>
                         </div>
-                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('lms-modal')">View Project</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('lms-modal', event)">View Project</a>
                     </div>
 
                     <div class="project-card">
@@ -216,7 +220,7 @@
                             <span class="project-tag">GitHub</span>
                             <span class="project-tag">Version Control</span>
                         </div>
-                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('version-control-modal')">View Project</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('version-control-modal', event)">View Project</a>
                     </div>
 
                     <!-- COPY THIS BLOCK to add more projects -->
@@ -447,17 +451,24 @@
             }
         }
 
-        function openProjectModal(modalId) {
+        function openProjectModal(modalId, evt) {
             const modal = document.getElementById(modalId);
             if (modal) {
+                if (evt) {
+                    evt.preventDefault();
+                    evt.stopPropagation();
+                }
+                window.scrollTo(0, 0);
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
                 
                 // Check images after a short delay
                 setTimeout(function() {
+                    window.scrollTo(0, 0);
                     checkAllImages();
-                }, 1000);
+                }, 100);
             }
+            return false;
         }
 
         function closeProjectModal(modalId) {
