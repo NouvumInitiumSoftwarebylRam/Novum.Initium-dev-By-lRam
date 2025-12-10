@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ApplicationDevelopment by lRam</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="assets/hero-bg.jpg.png" as="image">
+    <link rel="dns-prefetch" href="//github.com">
 </head>
 <body>
     <header>
@@ -36,7 +38,7 @@
                     <p class="hero-disclaimer">Novum Initium Application Development by lRam is a personal portfolio project and not a registered company. This website is created for learning and showcasing purposes only.</p>
                     <p class="hero-subtitle">Personal Portfolio & Learning Lab of a Future Software Developer.</p>
                     <p class="hero-description">
-                        I am currently in retraining (Umschulung) as a Fachinformatiker Anwendungsentwicklung in Germany,
+                        I am currently in retraining (Umschulung) as a Software Developer in Germany,
                         building my skills in software development and exploring various technologies.
                     </p>
                     <a href="#projects" class="hero-button">View My Projects</a>
@@ -56,7 +58,7 @@
                         - in my career, focusing on software development and technology.
                     </p>
                     <p>
-                        My interests span across Python programming, web development technologies, and various
+                        My interests span across Python programming, app development technologies, and various
                         software projects. I'm passionate about learning how to build efficient, user-friendly
                         applications and solving complex problems through code.
                     </p>
@@ -99,7 +101,7 @@
                 <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3 class="project-title">LagerverwaltungsApp - Warehouse Gate Management System (v1.5.0)</h3>
+                        <h3 class="project-title">Logistic App - Warehouse Gate Management System (v1.5.0)</h3>
                         <p class="project-description">
                             A modern logistics dashboard built as an IHK vocational training project during my interschip at the company HILA Automation for a possible customer, streamlining warehouse operations through automated driver check-ins and gate management.
                         </p>
@@ -150,7 +152,7 @@
                             <span class="project-tag">Tailwind CSS</span>
                             <span class="project-tag">SQLite</span>
                         </div>
-                        <a href="#" class="project-link" onclick="openProjectModal('warehouse-modal-en'); return false;">View Project</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('warehouse-modal-en')">View Project</a>
                     </div>
 
                     <div class="project-card">
@@ -164,7 +166,7 @@
                             <span class="project-tag">Data Processing</span>
                             <span class="project-tag">CLI</span>
                         </div>
-                        <a href="#" class="project-link" onclick="openProjectModal('python-data-analysis-tool-modal'); return false;">View Project</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('python-data-analysis-tool-modal')">View Project</a>
                     </div>
 
                     <div class="project-card">
@@ -200,7 +202,7 @@
                             <span class="project-tag">Python</span>
                             <span class="project-tag">Backend API</span>
                         </div>
-                        <a href="#" class="project-link" onclick="openProjectModal('lms-modal'); return false;">View Project</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('lms-modal')">View Project</a>
                     </div>
 
                     <div class="project-card">
@@ -214,7 +216,7 @@
                             <span class="project-tag">GitHub</span>
                             <span class="project-tag">Version Control</span>
                         </div>
-                        <a href="#" class="project-link" onclick="openProjectModal('version-control-modal'); return false;">View Project</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('version-control-modal')">View Project</a>
                     </div>
 
                     <!-- COPY THIS BLOCK to add more projects -->
@@ -245,7 +247,7 @@
                     <div class="contact-links">
                         <a href="mailto:lRam.software.novum-initium@outlook.de" class="contact-link">Email</a>
                         <span class="contact-link">LinkedIn (coming soon)</span>
-                        <span class="contact-link">GitHub (coming soon)</span>
+                        <a href="https://github.com/ljuben-martinoski" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -286,6 +288,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Novum Initium Application Development by lRam</p>
+            <p>made by Martinoski Ljuben</p>
             <a href="#hero" class="footer-link">Back to Top</a>
         </div>
     </footer>
@@ -297,13 +300,13 @@
             <button class="modal-close" onclick="closeProjectModal('lms-modal')">&times;</button>
             <h2 class="modal-title">Learning Management System</h2>
             <div class="project-gallery" id="lms-gallery">
-                <img src="assets/lms/dashboard.png.png" alt="LMS Dashboard" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Dashboard with welcome message and course overview - Click to enlarge">
-                <img src="assets/lms/explore-courses.png.png" alt="Explore Courses" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Explore Courses page with filter and search functionality - Click to enlarge">
-                <img src="assets/lms/profile-settings.png.png" alt="Profile & Settings" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Profile and Settings page - Click to enlarge">
-                <img src="assets/lms/grades.png.png" alt="My Grades" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Grades overview with overall average and detailed table - Click to enlarge">
-                <img src="assets/lms/user-profile.png.PNG" alt="User Profile" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="User profile editing - Click to enlarge">
-                <img src="assets/lms/package-json.png.png" alt="Package.json" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Project configuration with React and Vite - Click to enlarge">
-                <img src="assets/lms/python-auth.png.png" alt="Python Authentication" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Backend authentication code - Click to enlarge">
+                <img src="assets/lms/dashboard.png" alt="LMS Dashboard" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Dashboard with welcome message and course overview - Click to enlarge">
+                <img src="assets/lms/explore-courses.png" alt="Explore Courses" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Explore Courses page with filter and search functionality - Click to enlarge">
+                <img src="assets/lms/profile-settings.png" alt="Profile & Settings" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Profile and Settings page - Click to enlarge">
+                <img src="assets/lms/grades.png" alt="My Grades" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Grades overview with overall average and detailed table - Click to enlarge">
+                <img src="assets/lms/user-profile.png" alt="User Profile" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="User profile editing - Click to enlarge">
+                <img src="assets/lms/package-json.png" alt="Package.json" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Project configuration with React and Vite - Click to enlarge">
+                <img src="assets/lms/python-auth.png" alt="Python Authentication" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Backend authentication code - Click to enlarge">
             </div>
             <div class="image-error-message" id="image-error-msg" style="display: none;">
                 <p><strong>Note: Images are loading...</strong></p>
@@ -326,11 +329,12 @@
         <div class="modal-overlay" onclick="closeProjectModal('warehouse-modal-en')"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeProjectModal('warehouse-modal-en')">&times;</button>
-            <h2 class="modal-title">Logistic App - Warehouse Gate Management System</h2>
+            <h2 class="modal-title">Logistic App- Warehouse Gate Management System</h2>
             <div class="project-gallery" id="warehouse-gallery-en">
-                <img src="assets/warehouse/backend-main.png.png" alt="Backend Application Python Code" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Python backend main module code (FastAPI)">
-                <img src="assets/warehouse/service-worker.png.png" alt="Service Worker Source Code" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Frontend JavaScript Service Worker">
-                <img src="assets/warehouse/industrial-case.png.png" alt="Industrial Hardware Assembly" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Industrial deployment hardware for LagerverwaltungsApp">
+                <img src="assets/warehouse/backend-main.png" alt="Backend Application Python Code" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Python backend main module code (FastAPI)">
+                <img src="assets/warehouse/service-worker.png" alt="Service Worker Source Code" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Frontend JavaScript Service Worker">
+                <img src="assets/warehouse/access-point-with-miniPC.png" alt="Industrial Hardware Assembly" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Industrial deployment hardware for LagerverwaltungsApp">
+                <img src="assets/warehouse/driver-portal.png" alt="Fahrer-Self-Service-Portal" onclick="openImageLightbox(this.src, this.alt)" title="Mehrsprachiges Fahrer-Portal für Check-ins - Klicken zum Vergrößern">
             </div>
             <div class="image-error-message" id="warehouse-error-msg-en" style="display: none;">
                 <p><strong>Note: Images are loading...</strong></p>

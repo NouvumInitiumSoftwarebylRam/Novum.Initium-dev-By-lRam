@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnwendungsEntwicklung von lRam</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="assets/hero-bg.jpg.png" as="image">
+    <link rel="dns-prefetch" href="//github.com">
 </head>
 <body>
     <header>
@@ -54,7 +56,7 @@
                         Hallo! Ich absolviere derzeit eine Umschulung zum Fachinformatiker Anwendungsentwicklung in Deutschland. Diese Umschulung markiert einen Neuanfang in meiner Karriere mit dem Schwerpunkt Softwareentwicklung und Technologie.
                     </p>
                     <p>
-                        Meine Interessen umfassen Python-Programmierung, Webentwicklungstechnologien und diverse Softwareprojekte. Ich bin begeistert davon, effiziente und benutzerfreundliche Anwendungen zu entwickeln und komplexe Probleme durch Code zu lösen.
+                        Meine Interessen umfassen Python-Programmierung, anwendungsentwicklungstechnologien und diverse Softwareprojekte. Ich bin begeistert davon, effiziente und benutzerfreundliche Anwendungen zu entwickeln und komplexe Probleme durch Code zu lösen.
                     </p>
                     <p>
                         Diese Website dient mir als Portfolio und Lernlabor, in dem ich meine Fortschritte dokumentiere, Projekte teile und die Fähigkeiten präsentiere, die ich während meiner Umschulung entwickle.
@@ -145,7 +147,7 @@
                             <span class="project-tag">Tailwind CSS</span>
                             <span class="project-tag">SQLite</span>
                         </div>
-                        <a href="#" class="project-link" onclick="openProjectModal('warehouse-modal'); return false;">Projekt ansehen</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('warehouse-modal')">Projekt ansehen</a>
                     </div>
 
                     <div class="project-card">
@@ -159,7 +161,7 @@
                             <span class="project-tag">Data Processing</span>
                             <span class="project-tag">CLI</span>
                         </div>
-                        <a href="#" class="project-link" onclick="openProjectModal('python-data-analysis-tool-modal'); return false;">Projekt ansehen</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('python-data-analysis-tool-modal')">Projekt ansehen</a>
                     </div>
 
                     <div class="project-card">
@@ -196,7 +198,7 @@
                             <span class="project-tag">Python</span>
                             <span class="project-tag">Backend API</span>
                         </div>
-                        <a href="#" class="project-link" onclick="openProjectModal('lms-modal'); return false;">Projekt ansehen</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('lms-modal')">Projekt ansehen</a>
                     </div>
 
                     <div class="project-card">
@@ -210,7 +212,7 @@
                             <span class="project-tag">GitHub</span>
                             <span class="project-tag">Versionskontrolle</span>
                         </div>
-                        <a href="#" class="project-link" onclick="openProjectModal('version-control-modal'); return false;">Projekt ansehen</a>
+                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('version-control-modal')">Projekt ansehen</a>
                     </div>
 
                     <!-- COPY THIS BLOCK to add more projects -->
@@ -237,11 +239,11 @@
             <div class="container">
                 <h2 class="section-title">Kontakt</h2>
                 <div class="contact-content">
-                    <p>If you want to connect, feel free to reach out. I'm always interested in learning from others and sharing knowledge.</p>
+                    <p>Wenn Sie sich vernetzen möchten, zögern Sie nicht, Kontakt aufzunehmen. Ich bin immer daran interessiert, von anderen zu lernen und Wissen zu teilen.</p>
                     <div class="contact-links">
-                        <a href="mailto:lRam.software.novum-initium@outlook.de" class="contact-link">Email</a>
-                        <span class="contact-link">LinkedIn (coming soon)</span>
-                        <span class="contact-link">GitHub (coming soon)</span>
+                        <a href="mailto:lRam.software.novum-initium@outlook.de" class="contact-link">E-Mail</a>
+                        <span class="contact-link">LinkedIn (bald verfügbar)</span>
+                        <a href="https://github.com/ljuben-martinoski" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -281,24 +283,25 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Novum Initium Application Development by lRam</p>
+            <p>made by Martinoski Ljuben</p>
             <a href="#hero" class="footer-link">Nach oben</a>
         </div>
     </footer>
 
     <!-- Project Modal -->
     <div id="lms-modal" class="project-modal">
-        <div class="modal-overlay" onclick="closeProjectModal('lms-modal')"></div>
+        <div class="modal-overlay" onclick="closeProjectModal('lms-modal')" ontouchstart="" style="touch-action: manipulation;"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeProjectModal('lms-modal')">&times;</button>
             <h2 class="modal-title">Learning Management System</h2>
             <div class="project-gallery" id="lms-gallery">
-                <img src="assets/lms/dashboard.png" alt="LMS Dashboard" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Dashboard mit Willkommensnachricht und Kursübersicht - Klicken zum Vergrößern">
-                <img src="assets/lms/explore-courses.png" alt="Kurse erkunden" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Kurse erkunden Seite mit Filter- und Suchfunktion - Klicken zum Vergrößern">
-                <img src="assets/lms/profile-settings.png" alt="Profil & Einstellungen" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Profil und Einstellungen Seite - Klicken zum Vergrößern">
-                <img src="assets/lms/grades.png" alt="Meine Noten" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Notenübersicht mit Gesamtdurchschnitt und detaillierter Tabelle - Klicken zum Vergrößern">
-                <img src="assets/lms/user-profile.png" alt="Benutzerprofil" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Benutzerprofil Bearbeitung - Klicken zum Vergrößern">
-                <img src="assets/lms/package-json.png" alt="Package.json" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Projekt-Konfiguration mit React und Vite - Klicken zum Vergrößern">
-                <img src="assets/lms/python-auth.png" alt="Python Authentifizierung" onerror="handleImageError(this)" onclick="openImageLightbox(this.src, this.alt)" title="Backend Authentifizierungs-Code - Klicken zum Vergrößern">
+                <img src="assets/lms/dashboard.png" alt="LMS Dashboard" onclick="openImageLightbox(this.src, this.alt)" title="Dashboard mit Willkommensnachricht und Kursübersicht - Klicken zum Vergrößern">
+                <img src="assets/lms/explore-courses.png" alt="Kurse erkunden" onclick="openImageLightbox(this.src, this.alt)" title="Kurse erkunden Seite mit Filter- und Suchfunktion - Klicken zum Vergrößern">
+                <img src="assets/lms/profile-settings.png" alt="Profil & Einstellungen" onclick="openImageLightbox(this.src, this.alt)" title="Profil und Einstellungen Seite - Klicken zum Vergrößern">
+                <img src="assets/lms/grades.png" alt="Meine Noten" onclick="openImageLightbox(this.src, this.alt)" title="Notenübersicht mit Gesamtdurchschnitt und detaillierter Tabelle - Klicken zum Vergrößern">
+                <img src="assets/lms/user-profile.png" alt="Benutzerprofil" onclick="openImageLightbox(this.src, this.alt)" title="Benutzerprofil Bearbeitung - Klicken zum Vergrößern">
+                <img src="assets/lms/package-json.png" alt="Package.json" onclick="openImageLightbox(this.src, this.alt)" title="Projekt-Konfiguration mit React und Vite - Klicken zum Vergrößern">
+                <img src="assets/lms/python-auth.png" alt="Python Authentifizierung" onclick="openImageLightbox(this.src, this.alt)" title="Backend Authentifizierungs-Code - Klicken zum Vergrößern">
             </div>
             <div class="image-error-message" id="image-error-msg" style="display: none;">
                 <p><strong>Hinweis: Bilder werden geladen...</strong></p>
@@ -318,15 +321,15 @@
 
     <!-- Warehouse Management System Modal -->
     <div id="warehouse-modal" class="project-modal">
-        <div class="modal-overlay" onclick="closeProjectModal('warehouse-modal')"></div>
+        <div class="modal-overlay" onclick="closeProjectModal('warehouse-modal')" ontouchstart="" style="touch-action: manipulation;"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeProjectModal('warehouse-modal')">&times;</button>
             <h2 class="modal-title">LagerverwaltungsApp - Warehouse Gate Management System</h2>
             <div class="project-gallery" id="warehouse-gallery">
-                <img src="assets/warehouse/backend-main.png" alt="Backend Main" onload="console.log('backend-main loaded')" onclick="openImageLightbox(this.src, this.alt)" title="Backend-Hauptansicht mit FastAPI und SQLAlchemy - Klicken zum Vergrößern">
-                <img src="assets/warehouse/driver-portal.png" alt="Fahrer-Self-Service-Portal" onload="console.log('driver-portal loaded')" onclick="openImageLightbox(this.src, this.alt)" title="Mehrsprachiges Fahrer-Portal für Check-ins - Klicken zum Vergrößern">
-                <img src="assets/warehouse/industrial-case.png" alt="Industrieller Anwendungsfall" onload="console.log('industrial-case loaded')" onclick="openImageLightbox(this.src, this.alt)" title="Industrielle Anwendung bei Faber-Castell - Klicken zum Vergrößern">
-                <img src="assets/warehouse/service-worker.png" alt="Service Worker" onload="console.log('service-worker loaded')" onclick="openImageLightbox(this.src, this.alt)" title="Offline-fähiger Service Worker für lokale Bereitstellung - Klicken zum Vergrößern">
+                <img src="assets/warehouse/backend-main.png" alt="Backend Main" onclick="openImageLightbox(this.src, this.alt)" title="Backend-Hauptansicht mit FastAPI und SQLAlchemy - Klicken zum Vergrößern">
+                <img src="assets/warehouse/driver-portal.png" alt="Fahrer-Self-Service-Portal" onclick="openImageLightbox(this.src, this.alt)" title="Mehrsprachiges Fahrer-Portal für Check-ins - Klicken zum Vergrößern">
+                <img src="assets/warehouse/access-point-with-miniPC.png" alt="Industrieller Anwendungsfall" onclick="openImageLightbox(this.src, this.alt)" title="Industrielle Anwendung bei Faber-Castell - Klicken zum Vergrößern">
+                <img src="assets/warehouse/service-worker.png" alt="Service Worker" onclick="openImageLightbox(this.src, this.alt)" title="Offline-fähiger Service Worker für lokale Bereitstellung - Klicken zum Vergrößern">
             </div>
             <div class="image-error-message" id="warehouse-error-msg" style="display: none;">
                 <p><strong>Hinweis: Bilder werden geladen...</strong></p>
@@ -381,21 +384,12 @@
 
     <!-- Image Lightbox Modal -->
     <div id="image-lightbox" class="image-lightbox">
-        <div class="lightbox-overlay" onclick="closeImageLightbox()"></div>
+        <div class="lightbox-overlay" onclick="closeImageLightbox()" ontouchstart="" style="touch-action: manipulation;"></div>
         <div class="lightbox-content">
             <button class="lightbox-close" onclick="closeImageLightbox()">&times;</button>
             <img id="lightbox-image" src="" alt="">
             <p id="lightbox-caption" class="lightbox-caption"></p>
         </div>
-    </div>
-
-    <!-- Temporary test images -->
-    <div style="position: fixed; top: 10px; right: 10px; z-index: 9999; background: white; padding: 10px; border: 1px solid black;">
-        <h3>Test Images:</h3>
-        <img src="assets/warehouse/backend-main.png" alt="Test Backend" style="width: 100px; height: auto; margin: 5px;">
-        <img src="assets/warehouse/driver-portal.png" alt="Test Driver" style="width: 100px; height: auto; margin: 5px;">
-        <img src="assets/warehouse/industrial-case.png" alt="Test Industrial" style="width: 100px; height: auto; margin: 5px;">
-        <img src="assets/warehouse/service-worker.png" alt="Test Service" style="width: 100px; height: auto; margin: 5px;">
     </div>
 
     <script>
@@ -450,14 +444,25 @@
         function openProjectModal(modalId) {
             const modal = document.getElementById(modalId);
             if (modal) {
+                // Prevent any potential scrolling
+                if (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                // Force scroll to top immediately and after modal opens
+                window.scrollTo(0, 0);
+
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
-                
-                // Check images after a short delay
+
+                // Ensure scroll stays at top
                 setTimeout(function() {
+                    window.scrollTo(0, 0);
                     checkAllImages();
-                }, 1000);
+                }, 50);
             }
+            return false;
         }
 
         function closeProjectModal(modalId) {
@@ -481,7 +486,7 @@
                     closeImageLightbox();
                 }
             }
-        });
+        }, { passive: true });
 
         // Image Lightbox functions
         function openImageLightbox(imageSrc, imageAlt) {
