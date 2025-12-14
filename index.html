@@ -100,48 +100,11 @@
             <div class="container">
                 <h2 class="section-title">Projekte</h2>
                 <div class="projects-grid">
-                    <div class="project-card">
+                    <div class="project-card" data-modal-target="warehouse-modal">
                         <h3 class="project-title">LagerverwaltungsApp (v1.5.0)</h3>
                         <p class="project-description">
-                            Ein modernes Logistik-Dashboard, das als IHK-Ausbildungsprojekt durch meine Praktikumszeit bei HILA Automation für einen möglichen Kunden entwickelt wurde und Lagerabläufe durch automatisierte Fahrer-Check-ins und Torverwaltung optimiert.
+                            Ein modernes Logistik-Dashboard aus meiner IHK-Ausbildung, das Fahrer-Check-ins automatisiert und Torzuweisungen in Echtzeit steuert.
                         </p>
-                        <div class="project-actions">
-                            <button class="expand-btn" onclick="toggleProjectDescription('warehouse-description-expanded', this)" id="warehouse-expand-btn">
-                                <span class="expand-text">mehr</span>
-                            </button>
-                        </div>
-                        <div class="project-description-expanded" id="warehouse-description-expanded">
-                            <p class="project-description">
-                                <strong>Hauptfunktionen:</strong>
-                            </p>
-                            <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
-                                <li>Fahrer-Self-Service-Portal: Mehrsprachige Weboberfläche für Fahrer zum Check-in mit Referenznummern, wodurch Telefonate und Papierkram entfallen</li>
-                                <li>Echtzeit-Operator-Dashboard: Live-Überwachung mit Drag-and-Drop-Torzuweisung, Filterung und Statusverfolgung</li>
-                                <li>Automatisierte Torzuweisung: Intelligentes System, das Tore in 30%+ der Fälle automatisch zuweist</li>
-                                <li>Robuste Validierung: Reduziert Referenzfehler um 50% durch strikte Validierung und klare Fehlermeldungen</li>
-                            </ul>
-                            <p class="project-description">
-                                <strong>Technischer Stack:</strong>
-                            </p>
-                            <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
-                                <li>Backend: Python FastAPI mit SQLAlchemy, WebSockets, SQLite</li>
-                                <li>Frontend: React 18 + TypeScript + Vite, Tailwind CSS, Zustand State-Management</li>
-                                <li>Desktop: Electron-Wrapper für portable Windows-Bereitstellung</li>
-                            </ul>
-                            <p class="project-description">
-                                <strong>Leistung & Wirkung:</strong>
-                            </p>
-                            <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
-                                <li>Reduziert Check-in-Zeit von 2-3 Minuten auf &lt;1 Minute</li>
-                                <li>Optimiert Lagerabläufe mit Echtzeit-Updates</li>
-                                <li>DSGVO-konform mit minimaler Datenspeicherung</li>
-                                <li>Offline-fähige lokale Bereitstellung (keine Cloud-Abhängigkeit)</li>
-                                <li>Erfolgreich bei Faber-Castell-Anlagen eingesetzt</li>
-                            </ul>
-                            <p class="project-description">
-                                <em>Entwickelt während der Berufsausbildung zum Fachinformatiker Anwendungsentwicklung, demonstriert Full-Stack-Entwicklung, UI/UX-Design und Produktionsbereitstellung.</em>
-                            </p>
-                        </div>
                         <div class="project-tags">
                             <span class="project-tag">React 18</span>
                             <span class="project-tag">TypeScript</span>
@@ -152,10 +115,10 @@
                             <span class="project-tag">Tailwind CSS</span>
                             <span class="project-tag">SQLite</span>
                         </div>
-                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('warehouse-modal', event)">Projekt ansehen</a>
+                        <a href="#" class="project-link">Im Vollbild ansehen</a>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-modal-target="python-data-analysis-tool-modal">
                         <h3 class="project-title">Python Data Analysis Tool</h3>
                         <p class="project-description">
                             Ein Kommandozeilen-Tool für grundlegende Datenanalyse und Dateiverarbeitung. Derzeit in Entwicklung
@@ -166,35 +129,14 @@
                             <span class="project-tag">Data Processing</span>
                             <span class="project-tag">CLI</span>
                         </div>
-                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('python-data-analysis-tool-modal', event)">Projekt ansehen</a>
+                        <a href="#" class="project-link">Im Vollbild ansehen</a>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-modal-target="lms-modal">
                         <h3 class="project-title">Learning Management System</h3>
                         <p class="project-description">
-                            Ein vollständiges Lernmanagementsystem (LMS) als benutzerfreundliche Full-Stack-Webanwendung.
-                            Die Plattform bietet umfassende Funktionen für die Verwaltung von Online-Bildungsinhalten.
+                            Eine Full-Stack-LMS-Plattform mit Kursverwaltung, Lernfortschritt-Tracking und reaktiver React-Oberfläche.
                         </p>
-                        <div class="project-actions">
-                            <button class="expand-btn" onclick="toggleProjectDescription('lms-description-expanded-de', this)" id="lms-expand-btn-de">
-                                <span class="expand-text">mehr</span>
-                            </button>
-                        </div>
-                        <div class="project-description-expanded" id="lms-description-expanded-de">
-                            <p class="project-description">
-                                <strong>Funktionen:</strong> Sichere Benutzerregistrierung und Authentifizierung,
-                                Kursverwaltung für Lehrkräfte mit der Möglichkeit, Lektionen und Lehrmaterialien hinzuzufügen,
-                                sowie eine intuitive Lernumgebung für Schüler zur Kursansicht, Lektionsbearbeitung und
-                                Fortschrittsverfolgung. Die Anwendung unterstützt die Integration externer Ressourcen wie PDFs und Videos.
-                            </p>
-                            <p class="project-description">
-                                <strong>Technologie-Stack:</strong> Python Flask-Backend mit SQLite-Datenbank und React-Frontend.
-                                Das Projekt demonstriert zentrale Webentwicklungskonzepte wie Benutzerauthentifizierung,
-                                Datenbankverwaltung und RESTful API-Kommunikation. Die Anwendung läuft lokal mit einem
-                                Flask-Server auf Port 8000 und einem React-Frontend auf Port 5173, was eine einfache
-                                Einrichtung und Entwicklung ermöglicht.
-                            </p>
-                        </div>
                         <div class="project-tags">
                             <span class="project-tag">React</span>
                             <span class="project-tag">JavaScript</span>
@@ -203,26 +145,25 @@
                             <span class="project-tag">Python</span>
                             <span class="project-tag">Backend API</span>
                         </div>
-                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('lms-modal', event)">Projekt ansehen</a>
+                        <a href="#" class="project-link">Im Vollbild ansehen</a>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-modal-target="version-control-modal">
                         <h3 class="project-title">Versionskontroll-Workflow</h3>
                         <p class="project-description">
-                            Dokumentation und Beispiele von Git-Workflows, Branching-Strategien und Kollaborationspraktiken,
-                            die während der Softwareentwicklungs-Schulung erlernt wurden.
+                            Git-Workflows, Branching-Strategien und Kollaborationspraktiken, die ich in der Ausbildung erarbeitet habe.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Git</span>
                             <span class="project-tag">GitHub</span>
                             <span class="project-tag">Versionskontrolle</span>
                         </div>
-                        <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('version-control-modal', event)">Projekt ansehen</a>
+                        <a href="#" class="project-link">Im Vollbild ansehen</a>
                     </div>
 
                     <!-- COPY THIS BLOCK to add more projects -->
                     <!--
-                    <div class="project-card">
+                    <div class="project-card" data-modal-target="[modal-id]">
                         <h3 class="project-title">[Project Name]</h3>
                         <p class="project-description">
                             [Project description - 2-3 sentences about what it does and technologies used]
@@ -232,7 +173,7 @@
                             <span class="project-tag">[Tech 2]</span>
                             <span class="project-tag">[Tech 3]</span>
                         </div>
-                        <a href="[project-link]" class="project-link">[View/Download/Demo]</a>
+                        <a href="#" class="project-link">Im Vollbild ansehen</a>
                     </div>
                     -->
             </div>
@@ -298,28 +239,69 @@
         <div class="modal-overlay" onclick="closeProjectModal('lms-modal')" ontouchstart="" style="touch-action: manipulation;"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeProjectModal('lms-modal')">&times;</button>
-            <h2 class="modal-title">Learning Management System</h2>
-            <div class="project-gallery" id="lms-gallery">
-                <img src="assets/lms/dashboard.png" alt="LMS Dashboard" onclick="openImageLightbox(this.src, this.alt)" title="Dashboard mit Willkommensnachricht und Kursübersicht - Klicken zum Vergrößern">
-                <img src="assets/lms/explore-courses.png" alt="Kurse erkunden" onclick="openImageLightbox(this.src, this.alt)" title="Kurse erkunden Seite mit Filter- und Suchfunktion - Klicken zum Vergrößern">
-                <img src="assets/lms/profile-settings.png" alt="Profil & Einstellungen" onclick="openImageLightbox(this.src, this.alt)" title="Profil und Einstellungen Seite - Klicken zum Vergrößern">
-                <img src="assets/lms/grades.png" alt="Meine Noten" onclick="openImageLightbox(this.src, this.alt)" title="Notenübersicht mit Gesamtdurchschnitt und detaillierter Tabelle - Klicken zum Vergrößern">
-                <img src="assets/lms/user-profile.png" alt="Benutzerprofil" onclick="openImageLightbox(this.src, this.alt)" title="Benutzerprofil Bearbeitung - Klicken zum Vergrößern">
-                <img src="assets/lms/package-json.png" alt="Package.json" onclick="openImageLightbox(this.src, this.alt)" title="Projekt-Konfiguration mit React und Vite - Klicken zum Vergrößern">
-                <img src="assets/lms/python-auth.png" alt="Python Authentifizierung" onclick="openImageLightbox(this.src, this.alt)" title="Backend Authentifizierungs-Code - Klicken zum Vergrößern">
-            </div>
-            <div class="image-error-message" id="image-error-msg" style="display: none;">
-                <p><strong>Hinweis: Bilder werden geladen...</strong></p>
-                <p>Stellen Sie sicher, dass die Bilder im Ordner <code>assets/lms/</code> vorhanden sind:</p>
-                <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-                    <li>• dashboard.png</li>
-                    <li>• explore-courses.png</li>
-                    <li>• profile-settings.png</li>
-                    <li>• grades.png</li>
-                    <li>• user-profile.png</li>
-                    <li>• package-json.png</li>
-                    <li>• python-auth.png</li>
-                </ul>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <h2 class="modal-title">Learning Management System</h2>
+                    <p class="modal-subtitle">
+                        Vollständige LMS-Webanwendung mit sicherer Authentifizierung, Kursverwaltung und Lernfortschritts-Tracking.
+                    </p>
+                    <div class="modal-section">
+                        <h4 class="modal-section-title">Funktionen</h4>
+                        <ul class="modal-list">
+                            <li>Sichere Registrierung/Anmeldung und Rollen für Lernende & Lehrkräfte</li>
+                            <li>Kurs- und Lektionenverwaltung mit Upload von PDFs & Videos</li>
+                            <li>Lernfortschritt, Notenübersicht und Profil-Einstellungen</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h4 class="modal-section-title">Technologie-Stack</h4>
+                        <ul class="modal-list">
+                            <li>Frontend: React + Vite, React Router</li>
+                            <li>Backend: Python Flask API mit SQLite</li>
+                            <li>Lokale Entwicklung: Frontend auf Port 5173, Backend auf Port 8000</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h4 class="modal-section-title">Stärken</h4>
+                        <ul class="modal-list">
+                            <li>Klare Trennung von Frontend/Backend für einfaches Debugging</li>
+                            <li>Auth-Flow mit Login, Rollen, Profilbearbeitung</li>
+                            <li>Responsives UI für Desktop und Tablet</li>
+                        </ul>
+                    </div>
+                    <div class="modal-pills">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">React Router</span>
+                        <span class="project-tag">Vite</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Backend API</span>
+                    </div>
+                </div>
+                <div class="modal-media">
+                    <div class="project-gallery" id="lms-gallery">
+                        <img src="assets/lms/dashboard.png" alt="LMS Dashboard" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Dashboard mit Willkommensnachricht und Kursübersicht - Klicken zum Vergrößern">
+                        <img src="assets/lms/explore-courses.png" alt="Kurse erkunden" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Kurse erkunden Seite mit Filter- und Suchfunktion - Klicken zum Vergrößern">
+                        <img src="assets/lms/profile-settings.png" alt="Profil & Einstellungen" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Profil und Einstellungen Seite - Klicken zum Vergrößern">
+                        <img src="assets/lms/grades.png" alt="Meine Noten" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Notenübersicht mit Gesamtdurchschnitt und detaillierter Tabelle - Klicken zum Vergrößern">
+                        <img src="assets/lms/user-profile.png" alt="Benutzerprofil" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Benutzerprofil Bearbeitung - Klicken zum Vergrößern">
+                        <img src="assets/lms/package-json.png" alt="Package.json" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Projekt-Konfiguration mit React und Vite - Klicken zum Vergrößern">
+                        <img src="assets/lms/python-auth.png" alt="Python Authentifizierung" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Backend Authentifizierungs-Code - Klicken zum Vergrößern">
+                    </div>
+                    <div class="image-error-message" id="image-error-msg" style="display: none;">
+                        <p><strong>Hinweis: Bilder werden geladen...</strong></p>
+                        <p>Stellen Sie sicher, dass die Bilder im Ordner <code>assets/lms/</code> vorhanden sind:</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li>• dashboard.png</li>
+                            <li>• explore-courses.png</li>
+                            <li>• profile-settings.png</li>
+                            <li>• grades.png</li>
+                            <li>• user-profile.png</li>
+                            <li>• package-json.png</li>
+                            <li>• python-auth.png</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -329,21 +311,65 @@
         <div class="modal-overlay" onclick="closeProjectModal('warehouse-modal')" ontouchstart="" style="touch-action: manipulation;"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeProjectModal('warehouse-modal')">&times;</button>
-            <h2 class="modal-title">LagerverwaltungsApp- (v1.5.0)</h2>
-            <div class="project-gallery" id="warehouse-gallery">
-                <img src="assets/warehouse/backend-main.png" alt="Backend Main" onclick="openImageLightbox(this.src, this.alt)" title="Backend-Hauptansicht mit FastAPI und SQLAlchemy - Klicken zum Vergrößern">
-                <img src="assets/warehouse/driver-portal.png" alt="Fahrer-Self-Service-Portal" onclick="openImageLightbox(this.src, this.alt)" title="Mehrsprachiges Fahrer-Portal für Check-ins - Klicken zum Vergrößern">
-                <img src="assets/warehouse/service-worker.png" alt="Service Worker" onclick="openImageLightbox(this.src, this.alt)" title="Offline-fähiger Service Worker für lokale Bereitstellung - Klicken zum Vergrößern">
-            </div>
-            <div class="image-error-message" id="warehouse-error-msg" style="display: none;">
-                <p><strong>Hinweis: Bilder werden geladen...</strong></p>
-                <p>Stellen Sie sicher, dass die Bilder im Ordner <code>assets/warehouse/</code> vorhanden sind:</p>
-                <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-                    <li>• backend-main.png</li>
-                    <li>• driver-portal.png</li>
-                    <li>• industrial-case.png</li>
-                    <li>• service-worker.png</li>
-                </ul>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <h2 class="modal-title">LagerverwaltungsApp (v1.5.0)</h2>
+                    <p class="modal-subtitle">
+                        Echtzeit-Torverwaltung für Lager mit Fahrer-Self-Service-Portal und Operator-Dashboard.
+                    </p>
+                    <div class="modal-section">
+                        <h4 class="modal-section-title">Hauptfunktionen</h4>
+                        <ul class="modal-list">
+                            <li>Fahrerportal für Check-ins (mehrsprachig, Referenznummern)</li>
+                            <li>Live-Dashboard mit Drag-and-Drop-Torzuweisung</li>
+                            <li>Automatische Torvergabe und Status-Tracking</li>
+                            <li>Strenge Validierung reduziert Eingabefehler</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h4 class="modal-section-title">Technischer Stack</h4>
+                        <ul class="modal-list">
+                            <li>Backend: Python FastAPI, SQLAlchemy, WebSockets, SQLite</li>
+                            <li>Frontend: React 18 + TypeScript + Vite, Tailwind CSS, Zustand</li>
+                            <li>Desktop: Electron-Wrapper für portable Windows Builds</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h4 class="modal-section-title">Ergebnisse</h4>
+                        <ul class="modal-list">
+                            <li>Check-in-Zeit von 2–3 Minuten auf &lt;1 Minute reduziert</li>
+                            <li>DSGVO-konform mit minimaler Datenspeicherung</li>
+                            <li>Offline-fähige lokale Bereitstellung, kein Cloud-Zwang</li>
+                            <li>Einsatzbereit und bei Faber-Castell-Anlagen erprobt</li>
+                        </ul>
+                    </div>
+                    <div class="modal-pills">
+                        <span class="project-tag">React 18</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">Python FastAPI</span>
+                        <span class="project-tag">SQLAlchemy</span>
+                        <span class="project-tag">WebSockets</span>
+                        <span class="project-tag">Electron</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                        <span class="project-tag">SQLite</span>
+                    </div>
+                </div>
+                <div class="modal-media">
+                    <div class="project-gallery" id="warehouse-gallery">
+                        <img src="assets/warehouse/backend-main.png" alt="Backend Main" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Backend-Hauptansicht mit FastAPI und SQLAlchemy - Klicken zum Vergrößern">
+                        <img src="assets/warehouse/driver-portal.png" alt="Fahrer-Self-Service-Portal" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Mehrsprachiges Fahrer-Portal für Check-ins - Klicken zum Vergrößern">
+                        <img src="assets/warehouse/service-worker.png" alt="Service Worker" onclick="openImageLightbox(this.src, this.alt)" onerror="handleImageError(this)" title="Offline-fähiger Service Worker für lokale Bereitstellung - Klicken zum Vergrößern">
+                    </div>
+                    <div class="image-error-message" id="warehouse-error-msg" style="display: none;">
+                        <p><strong>Hinweis: Bilder werden geladen...</strong></p>
+                        <p>Stellen Sie sicher, dass die Bilder im Ordner <code>assets/warehouse/</code> vorhanden sind:</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li>• backend-main.png</li>
+                            <li>• driver-portal.png</li>
+                            <li>• service-worker.png</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -453,13 +479,11 @@
                     evt.stopPropagation();
                 }
 
-                // Force scroll to top immediately and after modal opens
                 window.scrollTo(0, 0);
 
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
 
-                // Ensure scroll stays at top
                 setTimeout(function() {
                     window.scrollTo(0, 0);
                     checkAllImages();
@@ -528,6 +552,33 @@
                 }
             }
         }
+
+        // Make each project card open its modal in Vollbild
+        function initProjectCardModals() {
+            const cards = document.querySelectorAll('.project-card[data-modal-target]');
+
+            cards.forEach((card) => {
+                const modalId = card.getAttribute('data-modal-target');
+                if (!modalId) return;
+
+                // Full card click
+                card.addEventListener('click', (evt) => {
+                    const interactive = evt.target.closest('button');
+                    if (interactive) return; // allow future buttons to work without opening modal
+                    openProjectModal(modalId, evt);
+                });
+
+                // Dedicated link inside the card
+                const link = card.querySelector('.project-link');
+                if (link) {
+                    link.addEventListener('click', (evt) => {
+                        openProjectModal(modalId, evt);
+                    });
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initProjectCardModals);
     </script>
 </body>
 </html>

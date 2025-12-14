@@ -627,11 +627,12 @@ p {
 .modal-content {
     position: relative;
     z-index: 1;
-    width: min(1100px, 95vw);
-    max-height: 90vh;
+    width: min(1200px, 96vw);
+    height: min(92vh, 1100px);
+    max-height: none;
     background: var(--background-card);
-    padding: var(--spacing-xl);
-    overflow-y: auto;
+    padding: var(--spacing-lg);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -668,7 +669,7 @@ p {
 
 .modal-title {
     color: var(--text-light);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     font-size: clamp(1.4rem, 4vw, 2.5rem);
     line-height: 1.25;
     text-align: center;
@@ -678,22 +679,80 @@ p {
     text-wrap: balance;
 }
 
-/* Project Image Gallery in Modal */
+/* Project Image Gallery in Modal + split layout */
+.modal-body {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--spacing-lg);
+    height: 100%;
+}
+
+.modal-info {
+    overflow-y: auto;
+    padding-right: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.modal-media {
+    overflow-y: auto;
+    padding-left: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+    text-align: center;
+}
+
+.modal-section {
+    background: linear-gradient(135deg,
+        rgba(46, 140, 112, 0.08) 0%,
+        rgba(43, 75, 59, 0.35) 100%);
+    border: 1px solid rgba(13, 90, 74, 0.35);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.modal-section-title {
+    color: var(--accent-muted);
+    margin-bottom: 0.35rem;
+    letter-spacing: 1px;
+}
+
+.modal-list {
+    margin-left: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.55;
+    margin-top: 0.25rem;
+}
+
+.modal-list li {
+    margin-bottom: 0.35rem;
+}
+
+.modal-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: var(--spacing-md);
-    flex: 1;
-    overflow-y: visible;
-    padding: var(--spacing-md) 0;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm) 0 var(--spacing-md) 0;
 }
 
 .project-gallery img {
     width: 100%;
     height: auto;
     min-height: 150px;
-    max-height: 400px;
+    max-height: 420px;
     border-radius: var(--border-radius);
     border: 3px solid rgba(13, 90, 74, 0.6);
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1209,6 +1268,20 @@ p {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1rem;
     }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .modal-content {
+        height: 90vh;
+        max-height: 90vh;
+    }
+
+    .modal-media {
+        max-height: 55vh;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1315,6 +1388,19 @@ p {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
         max-width: 95vw;
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        height: 88vh;
+        max-height: 88vh;
+    }
+
+    .modal-media {
+        max-height: 50vh;
     }
 
     /* Mobile footer */
