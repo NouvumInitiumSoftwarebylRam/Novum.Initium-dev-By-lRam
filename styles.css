@@ -1254,13 +1254,11 @@ p {
         justify-content: center;
     }
 
-    /* ===== MOBILE MODAL - Full screen scrollable ===== */
+    /* ===== MOBILE MODAL - Simple full screen window ===== */
     .project-modal {
         padding: 0;
-        display: none;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
+        background: var(--background-card);
+        overflow: hidden;
     }
 
     .project-modal.active {
@@ -1268,21 +1266,25 @@ p {
     }
 
     .modal-overlay {
-        display: none; /* Hide overlay on mobile - tap X to close */
+        display: none;
     }
 
     .modal-content {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
-        min-height: 100vh;
+        height: 100%;
         max-height: none;
-        height: auto;
         border-radius: 0;
         padding: var(--spacing-md);
-        padding-top: 70px; /* Space for close button */
-        padding-bottom: 100px; /* Extra scroll space */
-        overflow: visible;
-        margin: 0;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
     .modal-body {
