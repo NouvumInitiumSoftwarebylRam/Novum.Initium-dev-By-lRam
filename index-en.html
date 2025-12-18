@@ -485,23 +485,28 @@
                     evt.stopPropagation();
                 }
 
-                // Store scroll position
+                // Store page scroll position
                 modal.dataset.scrollY = window.scrollY;
+                
+                // RESET scroll BEFORE showing
+                modal.scrollTop = 0;
+                modal.scrollLeft = 0;
 
                 // Prevent body scroll
                 document.body.style.overflow = 'hidden';
 
                 // Show modal
                 modal.classList.add('active');
+                
+                // Force scroll to top immediately
+                modal.scrollTop = 0;
+                window.scrollTo(0, 0);
+                
+                // And again after a frame
+                requestAnimationFrame(function() {
+                    modal.scrollTop = 0;
+                });
 
-                // Scroll content to top
-                const content = modal.querySelector('.modal-content');
-                if (content) {
-                    content.scrollTop = 0;
-                    setTimeout(function() { content.scrollTop = 0; }, 50);
-                }
-
-                // Load images
                 setTimeout(checkAllImages, 100);
             }
             return false;

@@ -1256,9 +1256,19 @@ p {
 
     /* ===== MOBILE MODAL - Simple full screen window ===== */
     .project-modal {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh; /* Dynamic viewport height for mobile */
         padding: 0;
+        margin: 0;
         background: var(--background-card);
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        z-index: 10000;
     }
 
     .project-modal.active {
@@ -1266,50 +1276,59 @@ p {
     }
 
     .modal-overlay {
-        display: none;
+        display: none !important;
     }
 
     .modal-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        position: relative;
         width: 100%;
-        height: 100%;
-        max-height: none;
-        border-radius: 0;
-        padding: var(--spacing-md);
-        padding-top: 60px;
-        padding-bottom: 40px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .modal-body {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-md);
-        height: auto;
         min-height: auto;
-    }
-
-    .modal-info {
-        overflow: visible;
-        padding-right: 0;
-        flex-shrink: 0;
-    }
-
-    .modal-media {
-        overflow: visible;
-        padding-left: 0;
-        flex-shrink: 0;
         max-height: none;
+        height: auto;
+        border-radius: 0;
+        padding: 16px;
+        padding-top: 56px;
+        padding-bottom: 80px;
+        overflow: visible;
+        margin: 0;
+        box-shadow: none;
+        background: var(--background-card);
     }
-
+    
+    /* Anchor for scroll-to-top */
+    .modal-content::before {
+        content: '';
+        display: block;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .modal-body {
+        display: block;
+        height: auto;
+    }
+    
+    .modal-info {
+        display: block;
+        width: 100%;
+        overflow: visible;
+        padding: 0;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .modal-media {
+        display: block;
+        width: 100%;
+        overflow: visible;
+        padding: 0;
+        margin-bottom: var(--spacing-md);
+    }
+    
     .modal-title {
         font-size: 1.4rem;
+        margin-top: 0;
+        padding-top: 0;
         margin-bottom: var(--spacing-sm);
         line-height: 1.3;
         text-align: left;
