@@ -485,19 +485,25 @@
                 // Prevent body scroll
                 document.body.style.overflow = 'hidden';
 
+                // Show modal
                 modal.classList.add('active');
 
-                // Reset scroll position - scroll the modal itself on mobile
-                modal.scrollTop = 0;
-                const modalContent = modal.querySelector('.modal-content');
-                if (modalContent) {
-                    modalContent.scrollTop = 0;
-                }
+                // IMPORTANT: Scroll modal to top immediately
+                requestAnimationFrame(function() {
+                    modal.scrollTop = 0;
+                    window.scrollTo(0, 0);
+                    const modalContent = modal.querySelector('.modal-content');
+                    if (modalContent) {
+                        modalContent.scrollTop = 0;
+                    }
+                });
 
                 // Force images to load
                 setTimeout(function() {
+                    // Ensure we're at top after render
+                    modal.scrollTop = 0;
                     checkAllImages();
-                }, 100);
+                }, 50);
             }
             return false;
         }
