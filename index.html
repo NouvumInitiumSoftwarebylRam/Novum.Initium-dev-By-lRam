@@ -376,7 +376,7 @@
 
     <!-- Python Data Analysis Tool Modal -->
     <div id="python-data-analysis-tool-modal" class="project-modal">
-        <div class="modal-overlay" onclick="closeProjectModal('python-data-analysis-tool-modal')"></div>
+        <div class="modal-overlay" onclick="closeProjectModal('python-data-analysis-tool-modal')" ontouchstart=""></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeProjectModal('python-data-analysis-tool-modal')">&times;</button>
             <h2 class="modal-title">Python Data Analysis Tool</h2>
@@ -395,7 +395,7 @@
 
     <!-- Version Control Workflow Modal -->
     <div id="version-control-modal" class="project-modal">
-        <div class="modal-overlay" onclick="closeProjectModal('version-control-modal')"></div>
+        <div class="modal-overlay" onclick="closeProjectModal('version-control-modal')" ontouchstart=""></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeProjectModal('version-control-modal')">&times;</button>
             <h2 class="modal-title">Versionskontroll-Workflow</h2>
@@ -479,15 +479,31 @@
                     evt.stopPropagation();
                 }
 
-                window.scrollTo(0, 0);
+                // Prevent body scroll and fix position for mobile
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+                document.body.style.top = '-' + window.scrollY + 'px';
 
                 modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
 
+                // Reset modal scroll position and ensure content is at top
+                const modalContent = modal.querySelector('.modal-content');
+                if (modalContent) {
+                    modalContent.scrollTop = 0;
+                }
+
+                // Force images to load and check after delay
                 setTimeout(function() {
-                    window.scrollTo(0, 0);
                     checkAllImages();
-                }, 50);
+                    // Force a repaint to ensure images render on mobile
+                    const gallery = modal.querySelector('.project-gallery');
+                    if (gallery) {
+                        gallery.style.display = 'none';
+                        gallery.offsetHeight; // Trigger reflow
+                        gallery.style.display = '';
+                    }
+                }, 100);
             }
             return false;
         }
@@ -496,7 +512,14 @@
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                
+                // Restore body scroll
+                const scrollY = document.body.style.top;
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+                document.body.style.top = '';
+                window.scrollTo(0, parseInt(scrollY || '0') * -1);
             }
         }
 
