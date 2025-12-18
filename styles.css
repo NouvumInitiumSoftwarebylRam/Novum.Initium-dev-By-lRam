@@ -1258,26 +1258,21 @@ p {
     .project-modal {
         padding: 0;
         display: none;
-        flex-direction: column;
         overflow-y: scroll;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
-        scroll-behavior: auto;
     }
 
     .project-modal.active {
-        display: flex !important;
+        display: block !important;
     }
 
     .modal-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: 0;
+        display: none; /* Hide overlay on mobile - tap X to close */
     }
 
     .modal-content {
         position: relative;
-        z-index: 1;
         width: 100%;
         min-height: 100vh;
         max-height: none;
@@ -1287,7 +1282,7 @@ p {
         padding-top: 70px; /* Space for close button */
         padding-bottom: 100px; /* Extra scroll space */
         overflow: visible;
-        flex-shrink: 0;
+        margin: 0;
     }
 
     .modal-body {
