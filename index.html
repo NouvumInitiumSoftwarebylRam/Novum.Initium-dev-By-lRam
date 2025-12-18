@@ -479,30 +479,24 @@
                     evt.stopPropagation();
                 }
 
-                // Prevent body scroll and fix position for mobile
+                // Store scroll position
+                modal.dataset.scrollY = window.scrollY;
+
+                // Prevent body scroll
                 document.body.style.overflow = 'hidden';
-                document.body.style.position = 'fixed';
-                document.body.style.width = '100%';
-                document.body.style.top = '-' + window.scrollY + 'px';
 
                 modal.classList.add('active');
 
-                // Reset modal scroll position and ensure content is at top
+                // Reset scroll position - scroll the modal itself on mobile
+                modal.scrollTop = 0;
                 const modalContent = modal.querySelector('.modal-content');
                 if (modalContent) {
                     modalContent.scrollTop = 0;
                 }
 
-                // Force images to load and check after delay
+                // Force images to load
                 setTimeout(function() {
                     checkAllImages();
-                    // Force a repaint to ensure images render on mobile
-                    const gallery = modal.querySelector('.project-gallery');
-                    if (gallery) {
-                        gallery.style.display = 'none';
-                        gallery.offsetHeight; // Trigger reflow
-                        gallery.style.display = '';
-                    }
                 }, 100);
             }
             return false;
@@ -514,12 +508,11 @@
                 modal.classList.remove('active');
                 
                 // Restore body scroll
-                const scrollY = document.body.style.top;
                 document.body.style.overflow = '';
-                document.body.style.position = '';
-                document.body.style.width = '';
-                document.body.style.top = '';
-                window.scrollTo(0, parseInt(scrollY || '0') * -1);
+                
+                // Restore scroll position
+                const scrollY = modal.dataset.scrollY || 0;
+                window.scrollTo(0, parseInt(scrollY));
             }
         }
 
